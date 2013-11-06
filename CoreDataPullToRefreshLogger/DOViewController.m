@@ -20,13 +20,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self.tableView setDataSource:self];
+    
+    UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Log"];
+    [refresh addTarget:self
+                action:@selector(createLogNow)
+      forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refresh;
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(createLogNow) userInfo:nil repeats:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,6 +65,7 @@
 {
     [[DOLogStore sharedStore] createLog];
     [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
 }
 
 @end

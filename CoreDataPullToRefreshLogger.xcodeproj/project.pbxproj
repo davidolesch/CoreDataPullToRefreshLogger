@@ -22,6 +22,10 @@
 		D3A3C8AB182ABAC100B5D40C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A3C88A182ABAC100B5D40C /* UIKit.framework */; };
 		D3A3C8B3182ABAC100B5D40C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3A3C8B1182ABAC100B5D40C /* InfoPlist.strings */; };
 		D3A3C8B5182ABAC100B5D40C /* CoreDataPullToRefreshLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3C8B4182ABAC100B5D40C /* CoreDataPullToRefreshLoggerTests.m */; };
+		D3A3C8BF182ABB9900B5D40C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A3C8BE182ABB9900B5D40C /* CoreData.framework */; };
+		D3A3C8C2182ABC1100B5D40C /* LogModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3A3C8C0182ABC1100B5D40C /* LogModel.xcdatamodeld */; };
+		D3A3C8C5182ABECA00B5D40C /* DOLog.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3C8C4182ABECA00B5D40C /* DOLog.m */; };
+		D3A3C8C8182AC12300B5D40C /* DOLogStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3C8C7182AC12300B5D40C /* DOLogStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,12 @@
 		D3A3C8B0182ABAC100B5D40C /* CoreDataPullToRefreshLoggerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreDataPullToRefreshLoggerTests-Info.plist"; sourceTree = "<group>"; };
 		D3A3C8B2182ABAC100B5D40C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D3A3C8B4182ABAC100B5D40C /* CoreDataPullToRefreshLoggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataPullToRefreshLoggerTests.m; sourceTree = "<group>"; };
+		D3A3C8BE182ABB9900B5D40C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D3A3C8C1182ABC1100B5D40C /* LogModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LogModel.xcdatamodel; sourceTree = "<group>"; };
+		D3A3C8C3182ABECA00B5D40C /* DOLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOLog.h; sourceTree = "<group>"; };
+		D3A3C8C4182ABECA00B5D40C /* DOLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOLog.m; sourceTree = "<group>"; };
+		D3A3C8C6182AC12300B5D40C /* DOLogStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOLogStore.h; sourceTree = "<group>"; };
+		D3A3C8C7182AC12300B5D40C /* DOLogStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOLogStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3A3C8BF182ABB9900B5D40C /* CoreData.framework in Frameworks */,
 				D3A3C889182ABAC100B5D40C /* CoreGraphics.framework in Frameworks */,
 				D3A3C88B182ABAC100B5D40C /* UIKit.framework in Frameworks */,
 				D3A3C887182ABAC100B5D40C /* Foundation.framework in Frameworks */,
@@ -103,6 +114,7 @@
 		D3A3C885182ABAC100B5D40C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3A3C8BE182ABB9900B5D40C /* CoreData.framework */,
 				D3A3C886182ABAC100B5D40C /* Foundation.framework */,
 				D3A3C888182ABAC100B5D40C /* CoreGraphics.framework */,
 				D3A3C88A182ABAC100B5D40C /* UIKit.framework */,
@@ -120,6 +132,11 @@
 				D3A3C89B182ABAC100B5D40C /* Main_iPad.storyboard */,
 				D3A3C89E182ABAC100B5D40C /* DOViewController.h */,
 				D3A3C89F182ABAC100B5D40C /* DOViewController.m */,
+				D3A3C8C0182ABC1100B5D40C /* LogModel.xcdatamodeld */,
+				D3A3C8C3182ABECA00B5D40C /* DOLog.h */,
+				D3A3C8C4182ABECA00B5D40C /* DOLog.m */,
+				D3A3C8C6182AC12300B5D40C /* DOLogStore.h */,
+				D3A3C8C7182AC12300B5D40C /* DOLogStore.m */,
 				D3A3C8A1182ABAC100B5D40C /* Images.xcassets */,
 				D3A3C88D182ABAC100B5D40C /* Supporting Files */,
 			);
@@ -254,8 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3A3C8C2182ABC1100B5D40C /* LogModel.xcdatamodeld in Sources */,
 				D3A3C893182ABAC100B5D40C /* main.m in Sources */,
 				D3A3C8A0182ABAC100B5D40C /* DOViewController.m in Sources */,
+				D3A3C8C8182AC12300B5D40C /* DOLogStore.m in Sources */,
+				D3A3C8C5182ABECA00B5D40C /* DOLog.m in Sources */,
 				D3A3C897182ABAC100B5D40C /* DOAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +505,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D3A3C8C0182ABC1100B5D40C /* LogModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3A3C8C1182ABC1100B5D40C /* LogModel.xcdatamodel */,
+			);
+			currentVersion = D3A3C8C1182ABC1100B5D40C /* LogModel.xcdatamodel */;
+			path = LogModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D3A3C87B182ABAC000B5D40C /* Project object */;
 }
